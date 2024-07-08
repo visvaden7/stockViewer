@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title id="pageTitle">TSLA Stock Data</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+      .stock-data {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      .stock-data table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      .stock-data th,
+      .stock-data td {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      .stock-data th {
+        background-color: #f4f4f4;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="stock-data">
+      <div class="input-box">
+        <input type="text" id="textInput" />
+        <button type="button" onclick="inputHandling()">제출</button>
+        <input type="datetime-local" id="startDate" />
+        해당날짜 7일전까지 검색
+      </div>
+      <h1 id="mainHeading">TSLA Stock Data</h1>
+      <div id="chartContainer">
+        <canvas id="myChart" width="800" height="400"></canvas>
+      </div>
+      <table id="stockTable">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Open</th>
+            <th>High</th>
+            <th>Low</th>
+            <th>Close</th>
+            <th>Volume</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <script src="yahoo.js"></script>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+.container {
+    width: 80%;
+    /*background-color: yellowgreen;*/
+
+}
+
+.container table {
+    /*background-color: yellow;*/
+    border: 1px solid black;
+}
+
+.stock-viewer {
+    width: 600px;
+    margin:auto 0;
+    justify-content: center;
+}
