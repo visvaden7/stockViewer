@@ -6,7 +6,8 @@ interface Props {
 }
 
 export const StockTable: FunctionComponent<Props> = ({stockData}) => {
-    //TODO: props를 바로 받을 떄, 왜 undefined가 뜨나??
+
+    console.log(stockData[0].Date)
     const headers = []
     for(let key in stockData[0]){
         headers.push(key)

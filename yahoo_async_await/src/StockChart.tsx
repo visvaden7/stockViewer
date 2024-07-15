@@ -10,8 +10,10 @@ interface Props {
 
 const StockChart: FunctionComponent<Props> = ({stockData}) => {
     ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement);
-    //TODO: reduce와 map을 이용하여 구조분해를 사용하면 가능할 것 같은데
+    // TODO: reduce와 map을 이용하여 구조분해를 사용하면 가능할 것 같은데
     // const [dates, opens, highs, lows, closes] = stockData
+    // 지원이 멈췄으니 설명이 가능하니? 다른 라이브러리를 사용해보자
+
     const dates = stockData.map((item) => item.Date);
     const opens = stockData.map((item) => item.Open);
     const highs = stockData.map((item) => item.High);
